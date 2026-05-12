@@ -9,7 +9,7 @@ import { BottomBar } from "./preview/BottomBar";
 
 export function AppPreview() {
   return (
-    <section className="mb-20" aria-label="Muxy desktop app preview">
+    <section className="mb-20 hidden md:block" aria-label="Muxy desktop app preview">
       <div
         className="flex min-h-[640px] overflow-hidden rounded-xl border border-theme-border-strong bg-theme-bg font-mono text-[12px] text-theme-fg"
       >
