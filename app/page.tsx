@@ -1,6 +1,7 @@
 import { Topline } from "./components/Topline";
 import { Hero } from "./components/Hero";
 import { AppPreview } from "./components/AppPreview";
+import { MobilePreview } from "./components/MobilePreview";
 import { Features } from "./components/Features";
 import { Install } from "./components/Install";
 import { SiteFooter } from "./components/SiteFooter";
@@ -11,6 +12,7 @@ export default function Page() {
       <Topline />
       <Hero />
       <AppPreview />
+      <MobilePreview />
       <Features />
       <Install />
       <SiteFooter />
