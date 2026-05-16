@@ -95,10 +95,7 @@ export function MobilePreview() {
 
 function PhoneFrame({ children, time }: { children: React.ReactNode; time: string }) {
   return (
-    <div
-      className="relative aspect-[9/19.5] overflow-hidden rounded-[36px] border border-theme-border-strong bg-theme-bg shadow-[0_30px_60px_-20px_rgba(0,0,0,0.55)]"
-      style={{ boxShadow: "0 30px 60px -20px rgba(0,0,0,0.55), inset 0 0 0 3px rgba(255,255,255,0.04)" }}
-    >
+    <div className="relative aspect-[9/19.5] overflow-hidden rounded-[36px] border border-theme-border-strong bg-theme-bg">
       {/* Notch */}
       <div className="pointer-events-none absolute left-1/2 top-2 z-20 h-[22px] w-[100px] -translate-x-1/2 rounded-full bg-black/80" />
 
