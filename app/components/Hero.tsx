@@ -25,9 +25,7 @@ export function Hero() {
           Download for Mac
         </a>
         <a
-          href="https://github.com/muxy-app/mobile"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="#mobile"
           className="inline-flex items-center gap-1.5 rounded-md px-3 py-1.5 text-[13px] text-theme-fg-muted hover:text-theme-fg hover:no-underline"
         >
           Mobile remote (iOS · Android) →
