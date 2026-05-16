@@ -534,6 +534,13 @@ export function MobileCTAs() {
         <PlayGlyph />
         Google Play
       </a>
+      <a
+        href="/ios-beta"
+        className="inline-flex items-center gap-1.5 rounded-md border border-theme-border px-3 py-1.5 text-[13px] text-theme-fg hover:no-underline hover:bg-theme-hover active:translate-y-px"
+      >
+        Join the iOS beta
+        <span aria-hidden="true">→</span>
+      </a>
     </div>
   );
 }
