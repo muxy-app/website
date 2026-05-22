@@ -16,6 +16,7 @@ yarn-error.log*
 
 # generated
 lib/themes.generated.ts
+.content/
 
 # misc
 .DS_Store

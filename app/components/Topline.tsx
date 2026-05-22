@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { ThemePicker } from "./ThemePicker";
 import { GitHubStars } from "./GitHubStars";
 
@@ -12,6 +13,12 @@ export function Topline() {
         <span>Muxy</span>
       </a>
       <nav className="ml-auto inline-flex items-center gap-1">
+        <Link
+          href="/docs"
+          className="inline-flex items-center gap-1.5 rounded-md px-2.5 py-1.5 text-[13px] text-theme-fg-muted hover:bg-theme-hover hover:text-theme-fg hover:no-underline"
+        >
+          Docs
+        </Link>
         <GitHubStars />
         <ToplineLink href={DISCORD_URL} label="Discord">
           <DiscordIcon />
