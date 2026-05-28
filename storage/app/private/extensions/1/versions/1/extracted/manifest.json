@@ -1,0 +1,91 @@
+{
+  "name": "demo",
+  "version": "0.2.0",
+  "description": "Reference extension: playground tab, runScript command, topbar icon, status bar items, and settings.",
+  "entrypoint": "run.sh",
+  "permissions": [
+    "tabs:read",
+    "tabs:write",
+    "panes:read",
+    "panes:write",
+    "projects:read",
+    "projects:write",
+    "worktrees:read",
+    "worktrees:write",
+    "notifications:write",
+    "commands:run-script",
+    "commands:exec"
+  ],
+  "tabTypes": [
+    {
+      "id": "playground",
+      "title": "Muxy API Playground",
+      "entry": "tabs/playground.html"
+    },
+    {
+      "id": "dashboard",
+      "title": "Git Dashboard",
+      "entry": "tabs/dashboard.html"
+    }
+  ],
+  "commands": [
+    {
+      "id": "open-playground",
+      "title": "Demo: Open Playground",
+      "action": { "kind": "openTab", "tabType": "playground" }
+    },
+    {
+      "id": "run-script",
+      "title": "Demo: Open Git Dashboard",
+      "action": { "kind": "runScript", "script": "scripts/git-status.js" }
+    }
+  ],
+  "topbarItems": [
+    {
+      "id": "playground",
+      "icon": { "svg": "assets/playground.svg" },
+      "tooltip": "Open Demo Playground",
+      "command": "open-playground"
+    }
+  ],
+  "statusBarItems": [
+    {
+      "id": "ticker",
+      "icon": { "symbol": "leaf.fill" },
+      "text": "ready",
+      "tooltip": "Demo ticker (left)",
+      "side": "left",
+      "command": "open-playground"
+    },
+    {
+      "id": "dashboard",
+      "icon": { "symbol": "chart.bar.fill" },
+      "tooltip": "Open Git Dashboard",
+      "side": "right",
+      "command": "run-script"
+    }
+  ],
+  "settings": [
+    {
+      "key": "endpoint",
+      "title": "API Endpoint",
+      "description": "Base URL the demo extension would call.",
+      "type": "string",
+      "defaultValue": "https://api.example.com"
+    },
+    {
+      "key": "notify",
+      "title": "Notify on Updates",
+      "description": "Send a toast when the demo refreshes.",
+      "type": "bool",
+      "defaultValue": true
+    },
+    {
+      "key": "refreshSeconds",
+      "title": "Refresh Interval (s)",
+      "description": "How often to update the left status bar ticker.",
+      "type": "number",
+      "defaultValue": 5
+    }
+  ]
+}

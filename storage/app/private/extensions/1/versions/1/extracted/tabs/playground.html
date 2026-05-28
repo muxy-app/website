@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Muxy API Playground</title>
+  <link rel="stylesheet" href="playground.css">
+</head>
+<body>
+  <header>
+    <h1>Muxy API Playground</h1>
+    <div class="meta">
+      <span>extensionID: <code id="extension-id"></code></span>
+      <span>tabInstanceID: <code id="instance-id"></code></span>
+      <span>data: <code id="data"></code></span>
+    </div>
+  </header>
+
+  <section>
+    <h2>Read</h2>
+    <button data-call="tabs.list">tabs.list</button>
+    <button data-call="panes.list">panes.list</button>
+    <button data-call="projects.list">projects.list</button>
+    <button data-call="worktrees.list">worktrees.list</button>
+    <button data-call="theme">theme</button>
+  </section>
+
+  <section>
+    <h2>Tabs</h2>
+    <button data-call="tabs.new">tabs.new (terminal)</button>
+    <button data-call="tabs.next">tabs.next</button>
+    <button data-call="tabs.previous">tabs.previous</button>
+    <button data-call="tabs.switchTo.0">tabs.switchTo(0)</button>
+    <button data-call="tabs.open.terminal">tabs.open(terminal)</button>
+    <button data-call="tabs.open.vcs">tabs.open(vcs)</button>
+    <button data-call="tabs.open.editor">tabs.open(editor)</button>
+    <button data-call="tabs.open.self">tabs.open(self) — another playground</button>
+  </section>
+
+  <section>
+    <h2>Panes</h2>
+    <button data-call="panes.readScreen">panes.readScreen(first)</button>
+    <button data-call="panes.send">panes.send(first, "echo hi\n")</button>
+    <button data-call="panes.sendKeys">panes.sendKeys(first, "Enter")</button>
+    <button data-call="panes.rename">panes.rename(first, "Renamed")</button>
+  </section>
+
+  <section>
+    <h2>Projects &amp; Worktrees</h2>
+    <button data-call="projects.switchTo">projects.switchTo(active)</button>
+    <button data-call="worktrees.switchTo">worktrees.switchTo(active)</button>
+    <button data-call="worktrees.refresh">worktrees.refresh()</button>
+  </section>
+
+  <section>
+    <h2>Notifications &amp; Logging</h2>
+    <button data-call="toast">toast()</button>
+    <button data-call="console.log">console.log(...)</button>
+    <button data-call="console.warn">console.warn(...)</button>
+    <button data-call="console.error">console.error(...)</button>
+    <button data-call="throw">throw (uncaught)</button>
+  </section>
+
+  <section>
+    <h2>Shell (muxy.exec)</h2>
+    <button data-call="exec.argv">argv: git status</button>
+    <button data-call="exec.shell">shell: git diff | wc -l</button>
+    <button data-call="exec.cwd">argv with cwd: ls ~</button>
+    <button data-call="exec.failure">argv that fails (nonzero exit)</button>
+    <button data-call="exec.timeout">timeout (sleep 5 with 500ms cap)</button>
+  </section>
+
+  <section>
+    <h2>Live Events (muxy.events.subscribe)</h2>
+    <button data-call="events.subscribeAll">subscribe all</button>
+    <button data-call="events.unsubscribeAll">unsubscribe all</button>
+    <pre id="events">(subscribe to start streaming events…)</pre>
+  </section>
+
+  <section>
+    <h2>Output</h2>
+    <pre id="out">(no calls yet)</pre>
+  </section>
+
+  <script src="playground.js"></script>
+</body>
+</html>

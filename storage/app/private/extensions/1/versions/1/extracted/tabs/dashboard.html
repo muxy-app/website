@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Git Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <header>
+    <div class="title">
+      <h1 id="repo-name">…</h1>
+      <span class="branch" id="branch">…</span>
+    </div>
+    <div class="generated">generated <span id="generated-at">…</span></div>
+  </header>
+
+  <section class="stats">
+    <div class="stat">
+      <div class="value" id="stat-commits">—</div>
+      <div class="label">commits</div>
+    </div>
+    <div class="stat">
+      <div class="value" id="stat-changed">—</div>
+      <div class="label">changed files</div>
+    </div>
+    <div class="stat">
+      <div class="value" id="stat-contributors">—</div>
+      <div class="label">contributors</div>
+    </div>
+    <div class="stat">
+      <div class="value" id="stat-ahead-behind">—</div>
+      <div class="label">ahead / behind</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Working tree</h2>
+    <pre id="status">(no changes)</pre>
+  </section>
+
+  <section>
+    <h2>Recent commits</h2>
+    <ul id="commits" class="commits"></ul>
+  </section>
+
+  <section>
+    <h2>Top contributors</h2>
+    <ul id="contributors" class="contributors"></ul>
+  </section>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
